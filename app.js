@@ -46,7 +46,7 @@ const noVideoTimeoutMS = 5000; // Error alert if the video fails to connect
 
 // Xirsys API Info, not required for WebRTC, but it helps
 // Xirsys Network access tokens are issued via this PubNub Function
-const turnApiUrl = 'https://pubsub.pubnub.com/v1/blocks/sub-key/sub-c-7c977f32-a1b3-11e8-bc5d-ae80c5ea0c92/turn-credentials';
+const turnApiUrl = 'https://ps.pndsn.com/v1/blocks/sub-key/sub-c-33a3173c-adcc-11eb-9bc5-9690213e5a9f/turn-credentials';
 let turnToken;
 request(turnApiUrl, 'GET').then((response) => { turnToken = response });
 
@@ -183,8 +183,8 @@ const initWebRtcApp = () => {
     };
 
     pubnub = new PubNub({
-        publishKey : 'pub-c-f2238dd7-3f40-4ab9-909d-7a0930ef5dab',
-        subscribeKey : 'sub-c-6bd35c4a-808c-11e8-b3dc-56529179b978'
+        publishKey : 'pub-c-2686b5ba-48ee-48c1-91c4-c0efe92d8668',
+        subscribeKey : 'sub-c-33a3173c-adcc-11eb-9bc5-9690213e5a9f'
     });
 
     // This PubNub listener powers the text chat and online user list population.
